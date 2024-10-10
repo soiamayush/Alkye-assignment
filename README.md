@@ -77,7 +77,7 @@ Deployed Version
 The project is deployed on Netlify. You can access the live version here:
 
 ```bash
-http://localhost:3000
+https://alkye-assignment-new.netlify.app/
 ```
 
 ## Authentication Details
