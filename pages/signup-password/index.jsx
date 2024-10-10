@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import icon from "../../public/icon/logo.svg";
 import Image from "next/image";
 import { Eye, Loader } from "lucide-react";
 import { EyeOff } from "lucide-react";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
 
 const page = () => {

@@ -59,7 +59,7 @@ const page = () => {
                 className={`peer focus:outline-none border rounded-md font-medium p-4 px-5 md:p-6 md:px-8 w-full text-[#636363] text-sm md:text-2xl placeholder-transparent ${
                   isFocused || value ? "border-black" : "border-[#939393]"
                 }`}
-                placeholder=" " // Placeholder for the floating effect
+                placeholder=" "
                 value={value}
                 onFocus={handleFocus}
                 onBlur={handleBlur}

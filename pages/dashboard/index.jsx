@@ -87,6 +87,7 @@ const Index = () => {
         <Image
           src={icon}
           alt="Icon"
+          onClick={() => navigate.push("/")}
           className="h-auto w-16 md:w-36 cursor-pointer"
         />
         <div className="flex flex-col gap-4 md:gap-6 text-white">
