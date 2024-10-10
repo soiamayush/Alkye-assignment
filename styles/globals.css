@@ -1,27 +1,74 @@
+/* TailwindCSS with Custom Adjustments for the Carousel */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --custom-gray: #f4f4f4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* /styles/globals.css */
+@font-face {
+  font-family: "Söhne";
+  src: url("/fonts/soehne-web-buch.woff2") format("woff2"),
+    url("/fonts/soehne-web-buch.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Söhne";
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.embla {
+  overflow: hidden;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  will-change: transform;
+}
+
+.embla__slide {
+  position: relative;
+  flex: 0 0 calc(28.57% - 24px); /* for showing 3.5 slides on larger screens */
+  margin-right: 24px; /* consistent margin */
+}
+.embla__slide-less:first-child {
+  margin-left: 0rem; /* smaller margin on smaller screens */
+}
+
+.embla__slide-more:first-child {
+  margin-left: 5rem; /* smaller margin on smaller screens */
+}
+
+.embla__slide:last-child {
+  margin-right: 5rem; /* smaller end margin on smaller screens */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 calc(66.66% - 20px); /* for showing 1.5 slides on smaller screens */
+    margin-right: 20px;
   }
+
+  .embla__slide:first-child {
+    margin-left: 1rem; /* smaller margin on smaller screens */
+  }
+
+  .embla__slide:last-child {
+    margin-right: 2rem; /* smaller end margin on smaller screens */
+  }
+}
+
+.dot {
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
