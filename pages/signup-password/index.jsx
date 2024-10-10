@@ -130,7 +130,7 @@ const page = () => {
                   htmlFor="email"
                   className={`absolute left-6 md:left-8 top-4 md:top-6 text-[#636363] font-semibold transition-all duration-300 ${
                     isFocused || value
-                      ? "scale-90 -translate-y-6 md:-translate-y-10 opacity-90 text-sm md:text-2xl z-50 bg-white"
+                      ? "scale-90 -translate-y-6 md:-translate-y-10 opacity-100 text-sm md:text-2xl z-50 bg-white"
                       : "scale-100 opacity-100 text-md md:text-2xl"
                   }`}
                   style={{
